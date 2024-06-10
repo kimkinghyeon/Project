@@ -1,4 +1,4 @@
-package com.ohgiraffers.member.vo;
+package com.ohgiraffers.member.controller.model.vo;
 
 public abstract class Member {
     private String name;
@@ -35,8 +35,11 @@ public abstract class Member {
     }
 
     public void setPoint(int point) {
+
         this.point = point;
     }
+
+    public abstract double calculateInterest();
 
     @Override
     public String toString() {
@@ -46,5 +49,6 @@ public abstract class Member {
                 ", point=" + point +
                 '}';
     }
+
 
 }
